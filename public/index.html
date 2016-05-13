@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<head>
+	<title>Every day</title>
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+
+</head>
+<body  ng-app="skillBase" ng-controller="MainCtrl" background="images/save.jpg">
+  <div ng-view></div>
+  <nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">Brand</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="navbar-collapse collapse" id="bs-example-navbar-collapse-1" aria-expanded="false" style="height: 1px;">
+      <ul class="nav navbar-nav">
+
+
+
+      </ul>
+      <form class="navbar-form text-center" role="search">
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="Email">
+          <input type="text" class="form-control" placeholder="Password">
+        </div>
+        <button type="submit" class="btn btn-default">LOGIN</button>
+      </form>
+
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+
+<div class="container-fluid">
+  <div class="row">
+   <div class="mainConatiner col-md-3 col-md-offset-3">
+     <div class="headTxt" style="margin-bottom:20px;">Upgrade your skills</div>
+     <form name="userForm" ng-submit="submitForm(userForm.$valid)" novalidate>
+
+       <!--div class="form-group common">
+             <label>Name</label>
+             <input type="text" name="name" class="form-control" ng-model="name" required>
+             <p ng-show="userForm.name.$invalid" class="help-block">You name is required.</p>
+         </div-->
+
+         <!-- USERNAME -->
+         <div class="form-group common">
+             <label>Password</label>
+             <input type="password" name="password" class="form-control" ng-model="password" ng-minlength="3" ng-maxlength="8" required>
+         </div>
+
+         <!-- EMAIL -->
+         <div class="form-group common">
+             <label>Email</label>
+             <input type="email" name="email" class="form-control" ng-model="email">
+         </div>
+
+         <!-- SUBMIT BUTTON -->
+         <button type="submit" class="btn btn-primary">LinkedIN</button>
+     </form>
+     <h1>Login</h1>
+     <button ng-click="login()">Login with LinkedIn</button>
+
+    </div>
+
+  </div>
+</div>
+
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.10/angular.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.13/angular-ui-router.min.js"></script>
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.0/jquery.min.js"></script>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.9/jquery-ui.min.js"></script>
+<script type="text/javascript" src="javascripts/skill.js" ></script>
+  <script src="js/jquery.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<html>
+<head>
+  <script>
+var callbackResponse = (document.URL).split('#')[1];
+var responseParamters = (callbackResponse).split('&');
+var parameterMap = [];
+for(var i=0;i<responseParamters.length;i++){
+
+parameterMap[responseParamters[i].split('=').[0]] = responseParamters[i].split('=').[1] ;
+if(parameterMap.access_token !== undefined && parameterMap.access_token !== null ){
+
+var imgur ={
+
+  oauth:{
+
+    access_token:parameterMap.access_token,
+    expires_in:parameterMap.expires_in,
+
+  }
+};
+window.localStorage.setItem('imgur',JSON.stringify(imgur));
+window.location.href = "https://localhost/index.html#/secure"
+
+}
+}
+
+  </script>
+</head>
+<body>
+Redirecting...
+</body>
+</html>

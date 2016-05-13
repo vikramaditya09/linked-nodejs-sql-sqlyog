@@ -1,0 +1,40 @@
+body {
+
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  margin: 0 auto;
+  display: block;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  text-align: center;
+
+}
+
+a {
+  color: #00B7FF;
+}
+.mainConatiner{
+  margin-top: 40px;
+  border: 1px solid;
+  width: 550px;
+  height: 500px;
+  background: white;
+  opacity: 0.9;
+}
+.common{
+text-align:left;
+
+}
+.headTxt{
+
+  margin-bottom: 20px;
+  color: #5B85AA;
+  font-size: 28px;
+}
+.common label{
+
+color: #5B85AA;
+}
